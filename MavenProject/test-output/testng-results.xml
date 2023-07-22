@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-07-22T13:14:58Z" name="Suite" finished-at="2023-07-22T13:16:03Z" duration-ms="64788">
+    <groups>
+    </groups>
+    <test started-at="2023-07-22T13:14:58Z" name="Test1" finished-at="2023-07-22T13:15:38Z" duration-ms="40389">
+      <class name="org.Maven_Project.First_project_Maven.OrderTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.Maven_Project.First_project_Maven.OrderTest@750e2b97]" started-at="2023-07-22T18:44:58Z" name="setup" finished-at="2023-07-22T18:45:04Z" duration-ms="6133" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="End2EndTest()[pri:0, instance:org.Maven_Project.First_project_Maven.OrderTest@750e2b97]" started-at="2023-07-22T18:45:04Z" name="End2EndTest" finished-at="2023-07-22T18:45:36Z" duration-ms="32079" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- End2EndTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.Maven_Project.First_project_Maven.OrderTest@750e2b97]" started-at="2023-07-22T18:45:36Z" name="tearDown" finished-at="2023-07-22T18:45:38Z" duration-ms="2151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.Maven_Project.First_project_Maven.OrderTest -->
+    </test> <!-- Test1 -->
+    <test started-at="2023-07-22T13:15:39Z" name="Test2" finished-at="2023-07-22T13:16:03Z" duration-ms="24305">
+      <class name="org.Maven_Project.First_project_Maven.RemoveItem">
+        <test-method is-config="true" signature="setup()[pri:0, instance:org.Maven_Project.First_project_Maven.RemoveItem@54422e18]" started-at="2023-07-22T18:45:39Z" name="setup" finished-at="2023-07-22T18:45:41Z" duration-ms="2658" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="RemoveItemTest()[pri:0, instance:org.Maven_Project.First_project_Maven.RemoveItem@54422e18]" started-at="2023-07-22T18:45:41Z" name="RemoveItemTest" finished-at="2023-07-22T18:46:01Z" duration-ms="19510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RemoveItemTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:org.Maven_Project.First_project_Maven.RemoveItem@54422e18]" started-at="2023-07-22T18:46:01Z" name="tearDown" finished-at="2023-07-22T18:46:03Z" duration-ms="2132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.Maven_Project.First_project_Maven.RemoveItem -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
+</testng-results>
