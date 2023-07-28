@@ -19,6 +19,7 @@ public class Basepage {
 	public static WebDriver driver;
 	public String url;
 	public Properties prop;
+	public static String ScreenshotPath;
 	
 	
 	public Basepage() throws IOException {
@@ -57,14 +58,26 @@ public class Basepage {
 		
 	}
 	
-	public void TakeSnapShot(String name) throws IOException {
+	public static String TakeSnapShot(String name) throws IOException {
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		File desFile = new File("C:\\Users\\91728\\eclipse-workspace\\First_project_Maven\\target\\screenshots" + timeStamp()+ ".png");
+		String desFile = "C:\\Users\\91728\\eclipse-workspace\\First_project_Maven\\target\\screenshots" + timeStamp()+ ".png";
 		
-		FileUtils.copyFile(src, desFile);
+		ScreenshotPath=desFile;
+		
+		try {
+			FileUtils.copyFile(src, new File(desFile));
+			
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
+		return name;
+		
 	
 	}
-	public String timeStamp() {
+	public static String getScreenshotPath() {
+		return ScreenshotPath;
+	}
+	public static String timeStamp() {
 		return new SimpleDateFormat("yyyy-MM-dd HH-mm-ss").format(new Date()); 
 	}
 	

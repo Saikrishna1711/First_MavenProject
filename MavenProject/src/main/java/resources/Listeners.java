@@ -6,6 +6,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import Base.ExtentManager;
 import okhttp3.internal.cache.DiskLruCache.Snapshot;
 
 public class Listeners extends Base.Basepage implements ITestListener  {
@@ -14,10 +15,13 @@ public class Listeners extends Base.Basepage implements ITestListener  {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public void onTestFailure(ITestResult result) {
+	public synchronized void onTestFailure(ITestResult result) {
+		ExtentManager.getTest().fail(result.getThrowable());
 		
 		try {
-			TakeSnapShot(result.getName());
+			System.out.println("Test failed"+ result.getName());
+			TakeSnapShot(result.getMethod().getMethodName());
+			ExtentManager.attachImage();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
@@ -45,13 +49,17 @@ public class Listeners extends Base.Basepage implements ITestListener  {
 		
 	}
 	@Override
-	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
+	public synchronized void onStart(ITestContext context) {
+		ExtentManager.getReport();
+		ExtentManager.createTest(context.getName(), context.getName());
+		
+		
 		
 	}
 	@Override
-	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
+	public synchronized void onFinish(ITestContext context) {
+		ExtentManager.flushReport();
+		
 		
 	}
 
